@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração de Comandos SQL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Demonstração Prática de Comandos SQL</h1>
+        <p>Use os controles abaixo para simular INSERT, ALTER, DROP/DELETE e SELECT em uma tabela de usuários.</p>
+    </header>
+
+    <section id="table-section">
+        <h2>Tabela de Usuários (Simulação de Banco de Dados)</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Dados serão inseridos aqui via JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="commands">
+        <h2>Comandos SQL</h2>
+
+        <!-- INSERT -->
+        <div class="command">
+            <h3>INSERT: Inserir um novo usuário</h3>
+            <p>Exemplo: INSERT INTO usuarios (nome, idade) VALUES ('gabriel', 25);</p>
+            <input type="text" id="insert-name" placeholder="Nome (ex: gabriel)">
+            <input type="number" id="insert-age" placeholder="Idade (ex: 25)">
+            <button onclick="insertUser()">Executar INSERT</button>
+        </div>
+
+        <!-- ALTER -->
+        <div class="command">
+            <h3>ALTER: Adicionar uma coluna à tabela</h3>
+            <p>Exemplo: ALTER TABLE usuarios ADD cidade VARCHAR(50);</p>
+            <input type="text" id="alter-column" placeholder="Nome da coluna (ex: cidade)">
+            <button onclick="alterTable()">Executar ALTER</button>
+        </div>
+
+        <!-- DELETE -->
+        <div class="command">
+            <h3>DELETE: Remover um usuário por ID</h3>
+            <p>Exemplo: DELETE FROM usuarios WHERE id = 1;</p>
+            <input type="number" id="delete-id" placeholder="ID do usuário">
+            <button onclick="deleteUser()">Executar DELETE</button>
+        </div>
+
+        <!-- DROP -->
+        <div class="command">
+            <h3>DROP: Deletar a tabela inteira</h3>
+            <p>Exemplo: DROP TABLE usuarios;</p>
+            <button onclick="dropTable()">Executar DROP</button>
+        </div>
+
+        <!-- SELECT -->
+        <div class="command">
+            <h3>SELECT: Filtrar e exibir usuários</h3>
+            <p>Exemplo: SELECT * FROM usuarios WHERE idade > 20;</p>
+            <input type="number" id="select-age" placeholder="Idade mínima (ex: 20)">
+            <button onclick="selectUsers()">Executar SELECT</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
