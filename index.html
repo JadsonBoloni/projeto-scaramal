@@ -33,7 +33,7 @@
 
         <!-- INSERT -->
         <div class="command">
-            <h3>INSERT: Inserir um novo usuário</h3>
+            <h3>Inserir um novo usuário</h3>  <!-- ALTERADO: Removido "INSERT:" -->
             <p>Exemplo: INSERT INTO usuarios (nome, idade) VALUES ('gabriel', 25);</p>
             <input type="text" id="insert-name" placeholder="Nome (ex: gabriel)">
             <input type="number" id="insert-age" placeholder="Idade (ex: 25)">
@@ -42,7 +42,7 @@
 
         <!-- ALTER -->
         <div class="command">
-            <h3>ALTER: Adicionar uma coluna à tabela</h3>
+            <h3>Adicionar uma coluna à tabela</h3>  <!-- ALTERADO: Removido "ALTER:" -->
             <p>Exemplo: ALTER TABLE usuarios ADD cidade VARCHAR(50);</p>
             <input type="text" id="alter-column" placeholder="Nome da coluna (ex: cidade)">
             <button onclick="alterTable()">Executar ALTER</button>
@@ -50,7 +50,7 @@
 
         <!-- DELETE -->
         <div class="command">
-            <h3>DELETE: Remover um usuário por ID</h3>
+            <h3>Remover um usuário por ID</h3>  <!-- ALTERADO: Removido "DELETE:" -->
             <p>Exemplo: DELETE FROM usuarios WHERE id = 1;</p>
             <input type="number" id="delete-id" placeholder="ID do usuário">
             <button onclick="deleteUser()">Executar DELETE</button>
@@ -58,7 +58,7 @@
 
         <!-- DROP -->
         <div class="command">
-            <h3>DROP: Deletar a tabela inteira</h3>
+            <h3>Deletar a tabela inteira</h3>  <!-- ALTERADO: Removido "DROP:" -->
             <p>Exemplo: DROP TABLE usuarios;</p>
             <button onclick="dropTable()">Executar DROP</button>
         </div>
